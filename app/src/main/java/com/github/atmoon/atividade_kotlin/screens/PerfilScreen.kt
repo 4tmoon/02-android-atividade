@@ -15,12 +15,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
-fun PerfilScreen(modifier: Modifier = Modifier, navController: NavController) {
+fun PerfilScreen(
+    modifier: Modifier = Modifier, navController: NavController, nome: String, idade: Int
+) {
 
     Box(
         modifier = Modifier
@@ -34,9 +37,10 @@ fun PerfilScreen(modifier: Modifier = Modifier, navController: NavController) {
             modifier = Modifier.align(Alignment.Center)
         ) {
             Text(
-                text = "Bem-vindo, usuário!",
+                text = "Bem-vindo, \n $nome ($idade anos)",
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
                 color = Color.White
             )
 
@@ -47,8 +51,7 @@ fun PerfilScreen(modifier: Modifier = Modifier, navController: NavController) {
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
                 Text(
-                    text = "Voltar",
-                    fontSize = 20.sp
+                    text = "Voltar", fontSize = 20.sp
                 )
             }
         }

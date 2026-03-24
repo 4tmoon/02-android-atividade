@@ -15,12 +15,13 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
 @Composable
-fun FilmeScreen(modifier: Modifier = Modifier, navController: NavController) {
+fun FilmeScreen(modifier: Modifier = Modifier, navController: NavController, cliente: String?) {
 
     Box(
         modifier = Modifier
@@ -35,9 +36,10 @@ fun FilmeScreen(modifier: Modifier = Modifier, navController: NavController) {
         ) {
 
             Text(
-                text = "Interestelar",
+                text = "Filme Interestelar \n ($cliente)",
                 fontSize = 26.sp,
                 fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
                 color = Color.White
             )
 

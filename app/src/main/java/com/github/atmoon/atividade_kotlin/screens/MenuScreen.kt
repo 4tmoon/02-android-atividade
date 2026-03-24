@@ -69,7 +69,7 @@ fun MenuScreen(modifier: Modifier = Modifier, navController: NavController) {
             Spacer(modifier = Modifier.height(32.dp))
 
             Button(
-                onClick = { navController.navigate("perfil") },
+                onClick = { navController.navigate("perfil/Ana Maria/21") },
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
                 Text(
